@@ -4,12 +4,13 @@
 <title>HTML and CSS | OCSWiki</title>
 <meta name="description" content="Wiki project about HTML and CSS to practice HTML and CSS. This is literally a 'meta' description. "/>
 
-<link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8"> <!--Have to put the stylesheet in a "public" folder, same as this .erb file goes in the "views" folder -->
+
 </head>
 
 <header link="#000000" vlink="#000000" alink="#000000">
 
- <img class="imglogo" src="http://omahacodeschool.com/assets/ocs_title_bottom-0f5701005b41e72992e41e1e05b6deee.png" width="200px">
+ <img class="imglogo" src="http://omahacodeschool.com/assets/ocs_title_bottom-0f5701005b41e72992e41e1e05b6deee.png">
  
 
 <h1 align="center">HTML and CSS | <em style="color: #778899">OCS Wiki</em></h1>
@@ -18,12 +19,22 @@
 </header>
 <body link="#000000" vlink="#000000" alink="#000000">
 <div main text style="padding-left:25px">
+
+<p>Welcome, <%= @name %>!</p>
+
+
+
+
+
+
+
+
   <img src="http://allthingsd.com/files/2013/11/shutterstock_112499642.jpg" width="300" style="padding-left:75px"><br><br>
 <p><strong>We're so excited you want to join the library!</strong> Just answer<br>
 the questions listed below and we'll get you on your way.<br>
 <br>
 <form><strong>First name:</strong><br>
-<input type="text" name="firstname" value="ie: Flora">
+<input type="text" name="firstname" value="<%= @name %>">
 <br><br>
 <strong>Last name:</strong><br>
 <input type="text" name="lastname" value="ie: Zeng">
@@ -94,11 +105,7 @@ __________________<br><br>
 <input type="submit" value="Submit">
 <br><br>
 </form> 
-
-
-
-
-</div main text>
+</div maintext>
 <hr>
 <footer align="right" style="margin-right:10px;"> 
 <h4>LINKS:</h4>
